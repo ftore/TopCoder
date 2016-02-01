@@ -8,8 +8,8 @@ public class FriendScoreSRM436 {
 	
 	public static void main(String[] args) {
 		String[] friends = {"NYY",
-				 "YNY",
-		 "YYN"};
+							"YNY",
+		 					"YYN"};
 		
 		System.out.println(highestScore(friends));
 	}
@@ -27,7 +27,7 @@ public class FriendScoreSRM436 {
 		}
 		
 		for(int i = 0; i < friends.length; i++) {
-			List<Integer> n = get2HopNeighbors(i, friends.length);
+			List<Integer> n = getNeighbors(i, friends.length);
 			if(n.size() > max) {
 				max = n.size();
 			}
